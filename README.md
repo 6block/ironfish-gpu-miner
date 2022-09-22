@@ -14,7 +14,7 @@ A git repository for ZKWorkMiner release versions
 |-----------------------------|-----------------------------------------------------------|
 | -h [ --help ]               | Help screen                                               |
 | --address arg               | Ironfish Address (Email address supported during testnet) |
-| --batch_size arg   | Mining batch size (default: 573440000)                    |
+| --batch_size arg   | Deprecated, Mining batch size (default: 573440000)                    |
 | --pool arg               | Mining pool to mine on (36.189.234.195:60006)             |                                            |
 | --worker_name arg | Worker name                                               |
 | -v [ --version ]            | Print ZKWorkMiner version number                          |
