@@ -21,3 +21,11 @@ A git repository for ZKWorkMiner release versions
 | --threads arg   | Deprecated                                                |
 
 
+### ZKWorkMiner 0.1.7
+
+_Changes_
+
+- Added support for IRON for AMD cards. 
+- Fixed Illegal instruction crash on some CPU.
+
+
