@@ -31,6 +31,13 @@ A git repository for ZKWorkMiner release versions
 | -h, --help                  | Print help                                                         |
 | -V, --version               | Print version                                                      |
 
+### ZKWorkMiner 0.1.9
+
+_Changes_
+
+- Fixed the problem of incompatibility of cpu instruction set. 
+- Added support for IRON for more AMD cards.
+
 ### ZKWorkMiner 0.1.8
 
 _Changes_
