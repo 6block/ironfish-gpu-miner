@@ -31,6 +31,12 @@ A git repository for ZKWorkMiner release versions
 | -h, --help                  | Print help                                                         |
 | -V, --version               | Print version                                                      |
 
+### ZKWorkMiner 0.1.10
+
+_Changes_
+
+- Added support check mining address.
+
 ### ZKWorkMiner 0.1.9
 
 _Changes_
