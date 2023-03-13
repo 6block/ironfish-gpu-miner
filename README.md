@@ -31,6 +31,12 @@ A git repository for ZKWorkMiner release versions
 | -h, --help                  | Print help                                                         |
 | -V, --version               | Print version                                                      |
 
+### ZKWorkMiner 0.1.11
+
+_Changes_
+
+- Reduced CPU usage.
+
 ### ZKWorkMiner 0.1.10
 
 _Changes_
