@@ -31,6 +31,12 @@ A git repository for ZKWorkMiner release versions
 | -h, --help                  | Print help                                                         |
 | -V, --version               | Print version                                                      |
 
+### ZKWorkMiner 0.1.12
+
+_Changes_
+
+- Fixed only one card is used for multiple cards on the AMD platform.
+
 ### ZKWorkMiner 0.1.11
 
 _Changes_
