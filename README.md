@@ -31,6 +31,13 @@ A git repository for ZKWorkMiner release versions
 | -h, --help                  | Print help                                                         |
 | -V, --version               | Print version                                                      |
 
+### ZKWorkMiner 1.0.0
+
+_Changes_
+
+- Added multiple GPU cards computing power in the log.
+- Increased some AMD cards computing power.
+
 ### ZKWorkMiner 0.1.12
 
 _Changes_
