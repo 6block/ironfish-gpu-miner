@@ -33,6 +33,10 @@ A git repository for ZKWorkMiner release versions
 
 ### ZKWorkMiner 2.0.0
 
+- Added mining with exchange address.
+ 
+### ZKWorkMiner 2.0.0
+
 - Improve mining efficiency：**6900xt 20G**、 **3090  20G**、 **3080 18G**、 **2080ti 17G**
 
 ### ZKWorkMiner 1.0.0
