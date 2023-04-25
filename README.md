@@ -31,7 +31,7 @@ A git repository for ZKWorkMiner release versions
 | -h, --help                  | Print help                                                         |
 | -V, --version               | Print version                                                      |
 
-### ZKWorkMiner 2.0.0
+### ZKWorkMiner 2.0.1
 
 - Added mining with exchange address.
  
