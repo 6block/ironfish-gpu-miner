@@ -24,8 +24,6 @@ A git repository for ZKWorkMiner release versions
 | --pool <POOL>               | Specify the domain name/IP address and port of pool to connect to  |
 | --address <ADDRESS>         | Specify your mining reward address                                 |
 | --worker_name <WORKER_NAME> | Specify your worker name [default: "zkwork miner"]                 |
-| --threads <THREADS_COUNT>   | Specify your worker thread count, deprecated [default: 48]         |  
-| --batch_size <BATCH_SIZE>   | Specify batch size, deprecated [default: 573440000]                |
 | --verbosity <VERBOSITY>     | Specify the verbosity [options: 0, 1, 2, 3] [default: 0]           |
 | --tls                       | Connect to server over tls                                         |
 | -h, --help                  | Print help                                                         |
