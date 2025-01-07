@@ -1,85 +1,83 @@
-# ZK.Work_Ironfish_Miner
-
-### AMD & Nvidia Miner for blake3_Ironfish
-
-A git repository for ZKWorkMiner release versions
-
-* Download releases : https://github.com/6block/ironfish-gpu-miner/releases
-* Discord Group :  https://discord.com/invite/pKufwyjGFF
-* Twitter : https://twitter.com/ZKWorkHQ
- 
-### Usage
-
- zkwork_ironminer [OPTIONS] --pool \<POOL\> --address \<ADDRESS\>
-
-### Pool URL
- 
+# Ironfish_Miner
  * TCP: iron.hk.zk.work:60006
  * TLS: iron.hk.zk.work:50005
 
-### Options
+## Mining Tutorial
+**Recommend Miner**
+  * SRBMiner : https://github.com/doktor83/SRBMiner-Multi/releases
+  * TeamRedMiner: https://github.com/todxx/teamredminer/releases
+  * RigelMiner: https://github.com/rigelminer/rigel/releases
+  * lolMiner: https://github.com/Lolliedieb/lolMiner-releases/releases
 
- Parameter                    | Description                                               
-|-----------------------------|--------------------------------------------------------------------|
-| --pool <POOL>               | Specify the domain name/IP address and port of pool to connect to  |
-| --address <ADDRESS>         | Specify your mining reward address                                 |
-| --worker_name <WORKER_NAME> | Specify your worker name [default: "zkwork miner"]                 |
-| --verbosity <VERBOSITY>     | Specify the verbosity [options: 0, 1, 2, 3] [default: 0]           |
-| --tls                       | Connect to server over tls                                         |
-| -h, --help                  | Print help                                                         |
-| -V, --version               | Print version                                                      |
+**On Ubuntu**
 
-### ZKWorkMiner 2.0.1
+1. Get an Ironfish wallet address on [oreos](https://github.com/6block/ironfish-gpu-miner/releases/download/v2.0.1/zkwork_ironminer.tar.gz), [ironfish-node-app](https://ironfish.network/use/node-app) etc.
+2. Download Nvidia & AMD miner from **Recommend Miner**.
+3. On Nvidia & AMD: `tar -zvxf <Miner_Folder>.tar.gz && cd <Miner_Folder>`.
+5. Create `run_ironminer.sh`, update your Ironfish address and set worker name for mining server.
+6. Start mining with `sudo chmod +x run_ironminer.sh && ./run_ironminer.sh`.
+7. Check mining log.
 
-- Added mining with exchange address.
- 
-### ZKWorkMiner 2.0.0
 
-- Improve mining efficiency：**6900xt 20G**、 **3090  20G**、 **3080 18G**、 **2080ti 17G**
+### SRBMiner
+- Windows, Linux, CPU, AMD, NVIDIA, INTEL: [v2.7.4+](https://github.com/doktor83/SRBMiner-Multi/releases)
 
-### ZKWorkMiner 1.0.0
+- POOL URL
+    * TCP: iron.hk.zk.work:60006
+    * TLS: stratum+ssl://iron.hk.zk.work:50005
 
-_Changes_
+    ```shell
+    export GPU_MAX_HEAP_SIZE=100
+    export GPU_MAX_USE_SYNC_OBJECTS=1
+    export GPU_SINGLE_ALLOC_PERCENT=100
+    export GPU_MAX_ALLOC_PERCENT=100
+    export GPU_MAX_SINGLE_ALLOC_PERCENT=100
+    export GPU_ENABLE_LARGE_ALLOCATION=100
+    export GPU_MAX_WORKGROUP_SIZE=1024
+    #!/bin/sh
+    reset
 
-- Added multiple GPU cards computing power in the log.
-- Increased some AMD cards computing power.
+    ./SRBMiner-MULTI --disable-cpu --algorithm FISHHASH --pool <POOL> --wallet <ADDRESS> --worker <WORKER_NAME>
+    ```
 
-### ZKWorkMiner 0.1.12
 
-_Changes_
+### TeamRedMiner
+- Windows, Linux, AMD: [v0.10.21+](https://github.com/todxx/teamredminer/releases)
 
-- Fixed only one card is used for multiple cards on the AMD platform.
+- POOL URL
+    * TCP: stratum+tcp://iron.hk.zk.work:60006
+    * TLS: stratum+ssl://iron.hk.zk.work:50005
 
-### ZKWorkMiner 0.1.11
+    ```shell
+    export GPU_MAX_ALLOC_PERCENT=100
+    export GPU_SINGLE_ALLOC_PERCENT=100
+    export GPU_MAX_HEAP_SIZE=100
+    export GPU_USE_SYNC_OBJECTS=1
+    #!/bin/sh
+    reset
 
-_Changes_
+    ./teamredminer -a fishhash -o <POOL> -u <ADDRESS> -p <WORKER_NAME>
+    ```
 
-- Reduced CPU usage.
+### RigelMiner
+- Windows, Linux, NVIDIA: [v1.19.4+](https://github.com/rigelminer/rigel/releases)
 
-### ZKWorkMiner 0.1.10
+- POOL URL
+    * TCP: stratum+tcp://iron.hk.zk.work:60006
+    * TLS: stratum+ssl://iron.hk.zk.work:50005
 
-_Changes_
+    ```shell
+    ./rigel -a fishhash -o <POOL> -u <ADDRESS> -w <WORKER_NAME>
+    ```
 
-- Added support check mining address.
+### lolMiner
 
-### ZKWorkMiner 0.1.9
+- Windows, Linux, AMD: [v1.93+](https://github.com/Lolliedieb/lolMiner-releases/releases)
 
-_Changes_
+- POOL URL
+    * TCP: iron.hk.zk.work:60006
+    * TLS: iron.hk.zk.work:50005 (add `--tls on`)
 
-- Fixed the problem of incompatibility of cpu instruction set. 
-- Added support for IRON for more AMD cards.
-
-### ZKWorkMiner 0.1.8
-
-_Changes_
-
-- Added support connect to pool over tls. 
-- Added support specify the verbosity.
-
-### ZKWorkMiner 0.1.7
-
-_Changes_
-
-- Added support for IRON for AMD cards. 
-- Fixed Illegal instruction crash on some CPU.
-
+    ```shell
+    ./lolMiner --algo FISHHASH --pool <POOL> --user <ADDRESS>
+    ```
